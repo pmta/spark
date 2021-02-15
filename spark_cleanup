@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mmin=1440
+mmin=10080
 
 if [ ${SPARK_CLEAN_WORKER_OLD_DIRECTORIES}x !=  "x" ]
 then
