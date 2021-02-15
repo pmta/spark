@@ -1,0 +1,11 @@
+#!/bin/bash
+
+mmin=1440
+
+if [ ${SPARK_CLEAN_WORKER_OLD_DIRECTORIES}x !=  "x" ]
+then
+  mmin=${SPARK_CLEAN_WORKER_OLD_DIRECTORIES}
+fi
+
+find /spark/work/ -maxdepth 1 -mmin +${mmin} -name 'app-*' -exec rm -rf {} \;
+
